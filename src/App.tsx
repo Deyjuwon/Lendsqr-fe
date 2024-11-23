@@ -1,11 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
+import { Route, Routes } from 'react-router-dom';
+import Login from "./pages/Login/Login"
+
 
 function App() {
   return (
-    <div className="App">
-      lendsqr
+    <div className="">
+      <Routes>
+        <Route path='/login' element={<Login />} />
+      </Routes>
     </div>
   );
 }

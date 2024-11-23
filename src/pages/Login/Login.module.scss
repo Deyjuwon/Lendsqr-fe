@@ -1,0 +1,85 @@
+@import '../../styles/variables.scss';
+
+.Login {
+    background-color: #fff;
+    padding: 120px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-family: $workSans-family;
+    width: 100%;
+
+    h2 {
+        color: $blue-color;
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin-bottom: 45px;
+        font-weight: 400;
+        color: $blue-text;
+    }
+
+    p {
+        font-size: 12px;
+        color: $green-color;
+        font-weight: 600;
+    }
+}
+
+.logo {
+    height: auto;
+    max-width: 170px;
+}
+
+.InnerLogin {
+    display: flex;
+    flex-wrap: wrap; 
+    width: 100%;
+    align-items: center;
+}
+
+.LoginLeft {
+    width: 50%;
+    align-self: flex-end;
+}
+
+.LoginRight {
+    width: 50%;
+    padding-left: 100px;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        input {
+            height: 50px;
+            width: 70%;
+            padding-left: 10px;
+            color: $blue-text;
+            border: 2px solid rgba(84, 95, 125, 0.15);
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        button {
+            height: 48px;
+            width: 70%;
+            margin-top: 6px;
+            background-color: $green-color;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: darken($green-color, 10%); // Add hover effect
+            }
+        }
+    }
+}
+
