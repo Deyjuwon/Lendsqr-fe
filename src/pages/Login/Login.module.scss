@@ -153,7 +153,7 @@
         form {
             gap: 20px;
     
-            input {
+            .EmailInput {
                 width: 100%;  
                 font-size: 12px;
             }
@@ -164,6 +164,22 @@
             }
         }
     }
+
+    .PasswordInput {
+        position: relative; // For positioning the 'Show' text inside the input field
+        width: 100%; // Match the width of the input fields
+        margin-bottom: 4px;
+
+        input { 
+            width: 100%;
+            font-size: 12px;
+        }
+      
+        .TogglePassword {
+            font-size: 12px;   
+          }
+        
+      }
 
     
 }
