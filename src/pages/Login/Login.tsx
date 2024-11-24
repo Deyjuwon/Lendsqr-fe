@@ -20,7 +20,7 @@ const Login = () => {
           <form>
             <input type="text" placeholder="Email Address" />
             <input type="password" placeholder="Password" />
-            <p>FORGOT PASSWORD?</p>
+            <a href='#forgotpassword'>FORGOT PASSWORD?</a>
             <button type="submit">LOG IN</button>
           </form>
         </div>
