@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../../assets/logo.svg';
 import signIn from '../../assets/pablo-sign-in 1.svg';
 import classes from '../Login/Login.module.scss';
 
 const Login = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword((prev) => !prev);
+  };
+
   return (
     <div className={classes.Login}>
       <img className={classes.logo} src={logo} alt="Logo" />
@@ -18,9 +24,20 @@ const Login = () => {
           <h2>Welcome!</h2>
           <h3>Enter details to login.</h3>
           <form>
-            <input type="text" placeholder="Email Address" />
-            <input type="password" placeholder="Password" />
-            <a href='#forgotpassword'>FORGOT PASSWORD?</a>
+            <input className={classes.EmailInput} type="text" placeholder="Email Address" />
+            <div className={classes.PasswordInput}>
+              <input
+                type={showPassword ? 'text' : 'password'}
+                placeholder="Password"
+              />
+              <span
+                className={classes.TogglePassword}
+                onClick={togglePasswordVisibility}
+              >
+                {showPassword ? 'HIDE' : 'SHOW'}
+              </span>
+            </div>
+            <a href="#forgotpassword">FORGOT PASSWORD?</a>
             <button type="submit">LOG IN</button>
           </form>
         </div>
